@@ -1,0 +1,18 @@
+{% extends 'home.html' %}
+{% block content %}
+
+<b> Your Product</b> </br>
+<div>
+{{produts.id}}<br>
+{{produts.name}}<br>
+    {{produts.price}}<br></div>
+<div>
+<form action="/home_2/atc">
+ Qty<input type="number" name="qty">
+    <input type="hidden" name="proname" value="{{produts.name}}">
+<input type="submit" value="Add to cart">
+</div>
+
+</form>
+
+{% endblock %}

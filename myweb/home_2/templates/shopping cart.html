@@ -1,0 +1,12 @@
+{% extends 'home.html' %}
+{% block content %}
+
+<b><font size="3px">List of shopped items</font></b></br>
+<!-- {{cart_items}} -->
+{% for i in pros %}
+{{ i.id}} - {{i.qty}} - {{i.name}} - {{i.descri}} -
+{{i.price}} - {{i.brand}} - <b>Total Price:</b> {{i.total}}
+</br>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'home.html' %}
+
+{% block content %}
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head> -->
+
+
+<h1>Welcome to homepage of {{category}} </h1>
+<body bgcolor="Yellow">
+<ul>
+     <table border="2" style="margin:30px">
+      {% for i in products %}
+         {% for k,v in i.items %}
+           <tr>
+             <td>{{k}} </td>
+            <td>
+            {% if k == 'feature' %}
+                <ol>
+                {% for x in v %}
+                 <li>{{x}}</li>
+                    {% endfor %}
+                </ol>
+                 {% else %}
+                <ul>{{v}}</ul>
+                {% endif %}
+            </td>
+        </tr>
+
+<!--             <li>{{i}}</li> -->
+        {% endfor %}
+{% endfor %}
+
+     </table>
+</ul>
+
+{% endblock %}
+
+<!-- </body>
+</html> -->

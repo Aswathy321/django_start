@@ -1,0 +1,17 @@
+{% extends 'home.html' %}
+{% block content %}
+{% load static %}
+<br>
+ <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+<h1 class="header2search"><b> Product details</b></br></h1>
+<img src="{% static 'images/bt.jpg' %}" alt="Image not found">
+<!--  {{items }}  -->
+{% for i in items %}
+   <br>{{i.id}}</br>
+   <a href="/home_2/produts/{{i.id}}"> {{i.name}}</a></br>
+   {{i.descri}}</br>
+   {{i.price}}</br>
+   {{i.brand}}</br>
+{% endfor %}
+
+{% endblock %}

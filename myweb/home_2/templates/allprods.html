@@ -1,0 +1,28 @@
+{% extends 'home.html' %}
+{% block content %}
+{% load static %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="{% static 'js/myscript.js' %}"></script>
+<link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+
+<h1 class="headersearch"><b> Product Search</b></br></h1>
+<input type="text" name="keyword"id="keyword">
+<input type="button" value="search" onclick="getdata()">
+<input type="button" value="draw" onclick="drawchart()">
+<div id="data"></div>
+<div> <canvas id="Charts"></canvas> </div>
+
+<!-- console.log(x.id)
+                    console.log(x.name)
+                    console.log(x.descri)
+                    console.log(x.price)
+                    console.log(x.brand) -->
+{% endblock %}
+
+<!-- </script>
+<input type="text" name="keyword"id="keyword">
+<input type="button" value="search" onclick="getdata()">
+<div id="data"></div>
+
+
+<script> -->
